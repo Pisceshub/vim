@@ -19,7 +19,7 @@ call plug#begin('~/.vim/bundle')
     Plug 'w0ng/vim-hybrid'
     "Plug 'w0rp/ale'
     Plug 'universal-ctags/ctags'
-    Plug 'SirVer/ultisnips'
+    "Plug 'SirVer/ultisnips'
     Plug 'keelii/vim-snippets'
     Plug 'Shougo/neocomplcache.vim'
     Plug 'junegunn/vim-easy-align'
@@ -34,7 +34,10 @@ call plug#begin('~/.vim/bundle')
     Plug 'gregsexton/gitv', 
     Plug 'tpope/vim-fugitive'
     Plug 'simnalamburt/vim-mundo'
-    Plug '~/.vim/bundle/vim-gutentags-master'
+    Plug 'Ludovicchabant/vim-gutentags'
+    Plug 'Chiel92/vim-autoformat'
+    Plug 'bagrat/vim-buffet'
+
 call plug#end()
 
 
@@ -45,13 +48,13 @@ filetype plugin indent on
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""
-""snippet.vim settings
+"""snippet.vim settings
 " 代码片段插件
 """"""""""""""""""""""""""""""""""""""""""""""""
-let g:UltiSnipsExpandTrigger = "<tab>"
-let g:UltiSnipsListSnippets = "<c-tab>"
-let g:UltiSnipsJumpForwardTrigger = "<tab>"
-let g:UltiSnipsJumpBackwardTrigger = "<S-tab>"
+"let g:UltiSnipsExpandTrigger = "<tab>"
+"let g:UltiSnipsListSnippets = "<c-tab>"
+"let g:UltiSnipsJumpForwardTrigger = "<tab>"
+"let g:UltiSnipsJumpBackwardTrigger = "<S-tab>"
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""
@@ -82,8 +85,7 @@ let g:vlog_inst_gen_mode=2 "copy to clipboard and echo inst in split window
 """"""""""""""""""""""""""""""""""""""""""""""""
 ""vim-devicons settings
 """"""""""""""""""""""""""""""""""""""""""""""""
-set runtimepath+=~/.vim/bundle/vim-devicons-master
-set encoding=UTF-8
+"set encoding=UTF-8
 "Can be enabled or disabled
 let g:webdevicons_enable_nerdtree = 1
 
@@ -106,7 +108,7 @@ filetype plugin indent on
 " 
 
 let g:atv_snippet_project = 'riscv'
-"let g:atv_snippet_company = "Huawei.HS"
+"let g:atv_snippet_company = "XIN"
 let g:atv_snippet_device = ""
 let g:atv_snippet_author = "x00897025"
 let g:atv_snippet_email = ""
@@ -144,3 +146,13 @@ endif
 "let g:gutentags_ctags_extra_args = ['--fields=+niazS', '--extra=+q']
 "let g:gutentags_ctags_extra_args += ['--c++-kinds=+pxI']
 "let g:gutentags_ctags_extra_args += ['--c-kinds=+px']
+
+" 文件类型识别
+au BufRead,BufNewFile *.sv,*.svh set filetype=systemverilog
+
+" 格式化工具配置
+let g:formatdef_verible = '"verible-verilog-format --indentation_spaces=2"'
+let g:formatters_verilog = ['verible']
+let g:formatters_systemverilog = ['verible']
+ 
+

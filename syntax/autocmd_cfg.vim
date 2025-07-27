@@ -39,5 +39,4 @@ augroup init
 
 augroup END
 autocmd FocusGained,BufEnter * checktime
-
-
+autocmd BufRead,BufNewFile *.sv,*.svh,*.log,*.err,*.trace set filetype=systemverilog

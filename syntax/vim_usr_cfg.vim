@@ -18,8 +18,8 @@ set ignorecase
 packadd! matchit
 
 " 行列高亮
-set cuc
-set cul
+"set cuc
+"set cul
 
 "hi CursorColumn guibg=LightGrey
 "hi CursorLine ctermbg=NONE guibg=NONE
@@ -162,7 +162,8 @@ if has("nvim")
     source ~/vim/syntax/key_map_cfg.vim 
     source ~/vim/syntax/git_signify.vim
     source ~/vim/syntax/myscolors.vim
-    source ~/vim/syntax/sc_highlight.vim
+    "source ~/vim/syntax/sc_highlight.vim
+    "source ~/vim/syntax/systemverilog.vim
     source ~/vim/syntax/supercolors.vim
 
 elseif has("gui_running")
@@ -176,10 +177,10 @@ elseif has("gui_running")
     source ~/vim/syntax/git_signify.vim
     source ~/vim/syntax/myscolors.vim 
     "source ~/vim/syntax/sc_highlight.vim
+    "source ~/vim/syntax/systemverilog.vim
     source ~/vim/syntax/supercolors.vim
 else 
     echo "Running in vim"
 endif 
-
 
 

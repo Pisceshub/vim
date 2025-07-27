@@ -32,8 +32,8 @@ a   ccccc="cd ../../../../;la"
 a   cccccc="cd ../../../../../;la"
 a   sb="source ~/.bashrc"
 a   sc="source ~/.bashrc"
-a   gg="g ~/.vim/syntax/vim_usr_cfg.vim"
-a   gc="g ~/.vim/.bashrc"
+a   gg="g ~/vim/syntax/vim_usr_cfg.vim"
+a   gc="g ~/vim/.bashrc"
 a   md="mkdir"
 a   sppc="source    /home/ICer/ic_prjs/riscv/digital_data/script/Project.cshrc"
 a   cdpj="cd        /home/ICer/ic_prjs/riscv/digital_data/"
@@ -41,6 +41,8 @@ a   cd32s="cd       /home/ICer/ic_prjs/riscv/digital_data/verifaction/st/sim"
 a   gt="/usr/bin/gnome-terminal --tab&"
 cd() { builtin cd "$@" && ls; }
 
+
+a   h=history
 #=============================================================================================
 #   Synopsys Tools
 #=============================================================================================
@@ -48,8 +50,8 @@ export DVE_HOME=/home/synopsys/vcs-mx/O-2018.09-1
 #export DVE_HOME=/home/synopsys/vcs/O-2018.09-SP2
 #export DVE_HOME=/home/synopsys/vcs-mx/O-2018.09-SP2
 
-export VCS_HOME=/home/synopsys/vcs-mx/O-2018.09-1
-#export VCS_HOME=/home/synopsys/vcs/O-2018.09-SP2
+#export VCS_HOME=/home/synopsys/vcs-mx/O-2018.09-1
+export VCS_HOME=/home/synopsys/vcs/O-2018.09-SP2
 #export VCS_HOME=/home/synopsys/vcs-mx/O-2018.09-SP2
 
 export VERDI_HOME=/home/synopsys/verdi/Verdi_O-2018.09-SP2
@@ -205,6 +207,11 @@ a lmg_synopsys="/home/synopsys/scl/2018.06/linux64/bin/lmgrd -c /home/synopsys/s
 a lmg_mentor="/home/mentor/questasim/linux_x86_64/lmgrd -c /home/mentor/questasim/mentor.dat"
 a kill_lmg="sudo killall lmgrd"
 a relmg="kill_lmg && lmg_synopsys && lmg_mentor"
+#=============================================================================================
+# arm-m0-gcc
+#=============================================================================================
+export ARM_M0_GCC_PATH=/opt/gcc-arm-none-eabi-10.3-2021.10/bin:$ARM_M0_GCC_PATH
+
 
 #=============================================================================================
 # Others

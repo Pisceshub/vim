@@ -56,3 +56,7 @@ nmap <leader>tn :tabNext<cr>
 nmap <leader>tp :tabprevious<cr>
 nmap <leader>tc :tabclose<cr>
 
+
+
+
+map <leader>fm :Autoformat<CR>
